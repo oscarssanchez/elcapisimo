@@ -17,9 +17,11 @@
 		<div class="entry-meta">
 			<?php
 			elcapisimo_posted_on();
-			the_category();
 			?>
 		</div><!-- .entry-meta -->
+		<div class="category-meta">
+			<?php the_category( elcapisimo_category_separator() ); ?>
+		</div>
 		<?php endif;
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );

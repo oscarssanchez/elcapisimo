@@ -705,9 +705,15 @@ a:-webkit-any-link:hover {
 	position: relative;
 }
 
-.main-navigation a {
+.main-navigation a:-webkit-any-link {
 	display: block;
+	color: white;
 	text-decoration: none;
+	border-bottom: 2px solid transparent;
+}
+
+.main-navigation a:hover {
+	border-bottom: 2px solid white;
 }
 
 /* Small menu. */
@@ -857,12 +863,49 @@ a:-webkit-any-link:hover {
 /*--------------------------------------------------------------
 # Header
 */
+.site-header {
+	background-color: #3d69e7;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.site-header h1 a:-webkit-any-link {
+	color: white;
+}
+
 .site-branding {
 	height: 300px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: space-between;
+}
+
+.site-title {
+	font-size: 2em;
+	margin: 0;
+	font-weight: 700;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.site-description {
+	text-align: center;
+}
+
+.site-title a:-webkit-any-link {
+	color: white;
+}
+
+.site-post-category h3 a:-webkit-any-link {
+	color: white;
+}
+
+.site-post-category {
+	font-size: 1.3em;
+	padding-left: 20px;
+	padding-bottom: 30px;
+	text-transform: capitalize;
 }
 
 /*--------------------------------------------------------------
@@ -942,15 +985,12 @@ a:-webkit-any-link:hover {
 /*--------------------------------------------------------------
 ## Categories
  */
-.post-categories {
-	text-transform: uppercase;
+.category-meta {
 	list-style-type: none;
-	font-size: 14px;
-	font-weight: 700;
+	font-size: 15px;
 	margin-top: 5px;
 	margin-left: 0;
 	padding: 0;
-	letter-spacing: 2px;
 }
 /*--------------------------------------------------------------
 # Infinite scroll

@@ -177,3 +177,12 @@ function elcapisimo_excerpt_length() {
 	return 30;
 }
 add_filter( 'excerpt_length', 'elcapisimo_excerpt_length', 999 );
+
+/**
+ * Returns the_category() separator.
+ *
+ * @return string
+ */
+function elcapisimo_category_separator() {
+	return esc_html( ' - ' );
+}
