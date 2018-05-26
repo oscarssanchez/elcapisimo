@@ -1,0 +1,19 @@
+{
+  "name": "elcapisimo",
+  "version": "1.0.0",
+  "description": "WordPress theme with flex box concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarssanchez/elcapisimo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarssanchez/elcapisimo/issues"
+  },
+  "homepage": "https://github.com/oscarssanchez/elcapisimo#readme"
+}
