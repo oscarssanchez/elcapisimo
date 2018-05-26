@@ -57,6 +57,7 @@
 			</div>
 				<div class="site-post-category">
 					<h3><?php the_category( elcapisimo_category_separator() ) ?></h3>
+					<hr>
 				</div>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
