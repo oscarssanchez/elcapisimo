@@ -930,12 +930,33 @@ a:-webkit-any-link:hover {
 	flex-wrap: wrap;
 }
 
+.elcapisimo-single-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 8.5%;
+}
+
+.title-separator {
+	border: 2.5px solid #3d69e7;
+	width: 25%;
+	margin-top: 6px;
+	margin-left: 0;
+
+}
+
+.elcapisimo-elements-single {
+    width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .elcapisimo-elements {
 	width: 25%;
 	border-right: 1px solid #e2e2e2;
 	padding-left: 40px;
 	padding-right: 40px;
 }
+
 
 .posted-on {
 	font-weight: 700;
@@ -955,7 +976,7 @@ a:-webkit-any-link:hover {
 	display: block;
 }
 
-.hentry {
+.entry {
 	margin: 0 0 1.5em;
 }
 

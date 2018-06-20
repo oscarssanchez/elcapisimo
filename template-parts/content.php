@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( get_elcapisimo_elements_class_slug() ); ?>>
 	<header class="entry-header">
 		<?php
-		if ( 'post' === get_post_type() ) :
+		if ( 'post' === get_post_type() && is_home() ) :
 		?>
 		<div class="entry-meta">
 			<?php
@@ -25,6 +25,8 @@
 		<?php endif;
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
+			echo '<hr class="title-separator">';
+			elcapisimo_posted_by();
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif; ?>
@@ -34,18 +36,33 @@
 
 	<div class="entry-content">
 		<?php
-		the_excerpt( sprintf(
-			wp_kses(
+		if ( is_home() ) {
+			the_excerpt( sprintf(
+				wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'elcapisimo' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'elcapisimo' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
+		}
+
+		else {
+		    echo '<div class="post-content">'
+			?>
+			<div class="entry-meta">
+			<?php
+			elcapisimo_posted_on();
+			?>
+			</div><!-- .entry-meta -->
+			<?php
+			the_content();
+			echo '</div>';
+		}
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'elcapisimo' ),
