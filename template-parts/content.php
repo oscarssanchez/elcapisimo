@@ -36,7 +36,7 @@
 		<div class="entry-content">
 			<?php
 			elcapisimo_post_thumbnail();
-			if ( is_home() ) {
+			if ( ! is_single() || is_home() ) {
 				the_excerpt( sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */

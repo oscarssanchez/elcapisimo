@@ -930,9 +930,30 @@ a:-webkit-any-link:hover {
 	flex-wrap: wrap;
 }
 
+.elcapisimo-category-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.elcapisimo-category-header {
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
 .elcapisimo-single-post-container {
 	display: flex;
 	flex-wrap: wrap;
+	padding-left: 8.0%;
+	padding-right: 8.0%;
+}
+
+.elcapisimo-search-container {
+	padding-left: 8.0%;
+	padding-right: 8.0%;
+}
+
+.elcapisimo-404-container {
 	padding-left: 8.0%;
 	padding-right: 8.0%;
 }
