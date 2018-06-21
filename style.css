@@ -487,7 +487,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0;
 }
 
 ul {
@@ -501,7 +501,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 0;
 }
 
 dt {
@@ -930,9 +930,14 @@ a:-webkit-any-link:hover {
 	flex-wrap: wrap;
 }
 
-.elcapisimo-single-container {
+.elcapisimo-single-post-container {
 	display: flex;
 	flex-wrap: wrap;
+	padding-left: 8.0%;
+	padding-right: 8.0%;
+}
+
+.elcapisimo-single-page-container {
 	padding-left: 8.0%;
 	padding-right: 8.0%;
 }
@@ -1002,10 +1007,14 @@ a:-webkit-any-link:hover {
 	.elcapisimo-elements {
 		width: 100%;
 	}
+
 }
 
 @media only screen and (max-width: 980px) {
 	.elcapisimo-single-entry-header {
+		width: 100%;
+	}
+	.elcapisimo-post-entry-content {
 		width: 100%;
 	}
 }
@@ -1045,29 +1054,23 @@ a:-webkit-any-link:hover {
 --------------------------------------------------------------*/
 .comments-area {
 	padding-top: 5%;
-	width:100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	padding-left: 35%;
-}
 
-.comments-title span{
-	word-break: break-all;
 }
 
 .comment-list {
+	padding-top: 2%;
 	margin: 0;
-	padding-left: 15px;
+	padding-left: 2%;
 }
 
-.comment-respond {
-	width: 100%;
+.comments-title span{
+
+	word-break: break-all;
 }
 
 .comment-content p {
-    word-wrap: break-word;
-    word-break: break-all;
+
+	word-break: break-all;
 }
 
 .recentcomments a {

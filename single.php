@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main elcapisimo-single-container">
+		<main id="main" class="site-main elcapisimo-single-post-container">
 
 		<?php
 		while ( have_posts() ) :
