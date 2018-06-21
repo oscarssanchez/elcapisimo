@@ -854,10 +854,37 @@ a:-webkit-any-link:hover {
 .widget {
 	margin: 0 0 1.5em;
 	/* Make sure select elements fit in widgets. */
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .widget select {
 	max-width: 100%;
+}
+
+.widget-area {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 8%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.search-field {
+	margin-top: 20px;
+}
+
+.search-submit {
+	margin-top: 10px;
+}
+/*-------------------------------------------------------------
+# Footer
+ */
+
+.site-footer {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -982,6 +1009,7 @@ a:-webkit-any-link:hover {
 	border-right: 1px solid #e2e2e2;
 	padding-left: 40px;
 	padding-right: 40px;
+	margin-bottom: 20px;
 }
 
 .elcapisimo-single-entry-header {
