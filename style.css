@@ -985,6 +985,10 @@ a:-webkit-any-link:hover {
 	letter-spacing: 2px;
 }
 
+.elcapisimo-main-entry-content {
+	word-wrap: break-word;
+}
+
 .byline {
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -1032,6 +1036,7 @@ a:-webkit-any-link:hover {
 .entry-title {
 	margin-top: 10px;
 	margin-bottom: 0;
+	word-wrap: break-word;
 }
 
 
