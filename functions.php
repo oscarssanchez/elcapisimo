@@ -116,11 +116,42 @@ function elcapisimo_widgets_init() {
 }
 add_action( 'widgets_init', 'elcapisimo_widgets_init' );
 
+/**
+ * Returns the theme class for the flex-box elements
+ *
+ * @return string
+ */
 function get_elcapisimo_elements_class_slug() {
 	if ( is_single() ) {
 		return esc_html( 'elcapisimo-elements-single' );
 	} else {
 		return esc_html( 'elcapisimo-elements' );
+	}
+}
+
+/**
+ * Returns the theme class for the header.
+ *
+ * @return string
+ */
+function get_elcapisimo_header_class() {
+	if ( is_single() && ! is_home() ) {
+		return esc_html( 'elcapisimo-single-entry-header' );
+	} else {
+		return esc_html( 'elcapisimo-home-entry-header' );
+	}
+}
+
+/**
+ * Returns the theme class for the post content.
+ *
+ * @return string
+ */
+function get_elcapisimo_content_class() {
+	if ( is_home() ) {
+		return esc_html( 'elcapisimo-main-entry-content' );
+	} else {
+		return esc_html( 'elcapisimo-post-entry-content' );
 	}
 }
 

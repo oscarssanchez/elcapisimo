@@ -933,19 +933,20 @@ a:-webkit-any-link:hover {
 .elcapisimo-single-container {
 	display: flex;
 	flex-wrap: wrap;
-	padding-left: 8.5%;
+	padding-left: 8.0%;
+	padding-right: 8.0%;
 }
 
-.title-separator {
+.elcapisimo-title-separator {
 	border: 2.5px solid #3d69e7;
-	width: 25%;
+	width: 70%;
 	margin-top: 6px;
-	margin-left: 0;
-
+	margin-bottom: 20px;
 }
 
 .elcapisimo-elements-single {
-    width: 100%;
+	width: 100%;
+	padding-top: 3%;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -957,17 +958,51 @@ a:-webkit-any-link:hover {
 	padding-right: 40px;
 }
 
+.elcapisimo-single-entry-header {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+}
+
+.elcapisimo-single-entry-header h1 {
+	font-size: 2em;
+	font-weight: 700;
+	word-wrap: break-word;
+	padding-right: 10%;
+}
+
+.elcapisimo-post-entry-content {
+	width: 65%;
+	display: flex;
+	justify-content: right;
+	word-wrap: break-word;;
+}
 
 .posted-on {
 	font-weight: 700;
 	color: #a2a2a2;
-	font-size: 12px;;
+	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
+.byline {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #a2a2a2;
+	text-align: right;
+	font-size: 14px;
+	width: 85%;
+}
+
 @media only screen and (max-width: 768px) {
 	.elcapisimo-elements {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	.elcapisimo-single-entry-header {
 		width: 100%;
 	}
 }
@@ -1002,10 +1037,49 @@ a:-webkit-any-link:hover {
 
 .entry-content {
 	margin: 0;
+	word-break: break-all
 }
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+	padding-top: 5%;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	padding-left: 35%;
+}
+
+.comments-title span{
+	word-break: break-all;
+}
+
+.comment-list {
+	margin: 0;
+	padding-left: 15px;
+}
+
+.comment-respond {
+	width: 100%;
+}
+
+.comment-content p {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.recentcomments a {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+@media only screen and (max-width: 1049px) {
+	.comments-area {
+		padding-left: 0;
+		justify-content: flex-start;
+	}
+}
 .comment-content a {
 	word-wrap: break-word;
 }

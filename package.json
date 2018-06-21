@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/oscarssanchez/elcapisimo/issues"
   },
-  "homepage": "https://github.com/oscarssanchez/elcapisimo#readme"
+  "homepage": "https://github.com/oscarssanchez/elcapisimo#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "grunt-cli": "^1.2.0",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.5"
+  }
 }
