@@ -657,11 +657,11 @@ a:-webkit-any-link:hover {
 --------------------------------------------------------------*/
 .main-navigation {
 	display: flex;
-	float: none;
-	clear: none;
-	justify-content: flex-end;
-	width: 100%;
-	margin-top: 20px;
+    float: none;
+    clear: none;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .main-navigation ul {
@@ -719,7 +719,7 @@ a:-webkit-any-link:hover {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -909,7 +909,7 @@ a:-webkit-any-link:hover {
 }
 
 .site-title {
-	font-size: 2em;
+	font-size: 4em;
 	margin: 0;
 	font-weight: 700;
 	margin-top: 20px;

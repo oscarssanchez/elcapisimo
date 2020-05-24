@@ -25,35 +25,36 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elcapisimo' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'elcapisimo' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
 		<div class="site-branding">
 			<div class="site-title-description">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
 					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a></h1>
 					<?php
 				else :
 					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html ( bloginfo( 'name' ) ); ?></a></p>
 					<?php
 				endif;
 				$elcapisimo_description = get_bloginfo( 'description', 'display' );
 				if ( $elcapisimo_description || is_customize_preview() ) :
 					?>
-					<p class="site-description"><?php echo $elcapisimo_description; /* WPCS: xss ok. */ ?></p>
-				<?php endif;
-				if ( ! is_front_page() && ! is_home() ) :
+					<p class="site-description"><?php echo esc_html ( $elcapisimo_description ); /* WPCS: xss ok. */ ?></p>
+				<?php endif; ?>
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'elcapisimo' ); ?></button>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
 					?>
+				</nav><!-- #site-navigation -->
+				<?php
+				if ( ! is_front_page() && ! is_home() ) :
+				?>
 			</div>
 				<div class="site-post-category">
 					<h3><?php the_category( elcapisimo_category_separator() ) ?></h3>
